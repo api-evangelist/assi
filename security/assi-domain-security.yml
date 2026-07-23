@@ -1,0 +1,48 @@
+generated: '2026-07-19'
+method: probed
+source: live DNS/TLS probes of assi.st (the only host in apis.yml)
+notes: >-
+  assi.st resolves NS records but publishes no A/AAAA record, so there is no
+  reachable web host and no TLS endpoint to probe. Mail is still routed to
+  Google Workspace via MX. The company (Assist) was acquired by Conversocial in
+  March 2019 and the domain is now parked at 101domain nameservers.
+hosts:
+- host: assi.st
+  reachable: false
+  a_record: false
+  aaaa_record: false
+  https: null
+  tls_version: null
+  cert_expires: null
+  hsts: null
+  evidence: dig +short assi.st A returned no answer
+domains:
+- domain: assi.st
+  nameservers:
+  - ns1.101domain.com
+  - ns2.101domain.com
+  - ns5.101domain.com
+  dnssec: false
+  ds_record: false
+  caa: []
+  mx:
+  - 1 aspmx.l.google.com
+  spf: false
+  dmarc: false
+  dmarc_policy: null
+findings:
+- id: no-web-host
+  severity: informational
+  detail: No A/AAAA record; the public website is offline.
+- id: no-dnssec
+  severity: low
+  detail: No DS record published for assi.st.
+- id: no-caa
+  severity: low
+  detail: No CAA record restricting which CAs may issue for assi.st.
+- id: no-spf
+  severity: medium
+  detail: MX still routes mail to Google Workspace but no SPF TXT record is published.
+- id: no-dmarc
+  severity: medium
+  detail: No _dmarc.assi.st TXT record, so the domain publishes no DMARC policy.

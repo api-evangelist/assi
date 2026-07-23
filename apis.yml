@@ -1,19 +1,52 @@
 aid: assi
-name: assi
-description: assi is a company surfaced as a portfolio company of slow-ventures and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/assi.png
+name: Assist
+description: >-
+  Assist (assi.st) was a San Francisco conversational-commerce platform founded in 2015 by Shane Mac,
+  Giovanni Vatieri, and Geek Squad founder Robert Stephens, and backed by Slow Ventures. Assist built
+  branded chatbot and voice assistant experiences that let consumers order, book, and pay inside
+  messaging channels, running deployments for brands including Fandango, 1-800-Flowers, and Hyatt
+  across Facebook Messenger, Telegram, Twitter, Apple Business Chat, Amazon Alexa, and Google
+  Assistant, where it shipped one of the first Google Actions at launch in 2016. Conversocial acquired
+  Assist in March 2019 and Shane Mac became Conversocial's Chief Automation Officer. The assi.st
+  domain is now parked with no web host, and Assist never published a public developer portal, API
+  documentation, or machine-readable API specification, so there is no API surface to catalog.
 url: https://raw.githubusercontent.com/api-evangelist/assi/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - slow-ventures
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: acquired-no-api-surface
+x-status: acquired
+x-acquired-by:
+  name: Conversocial
+  url: https://www.conversocial.com
+  date: '2019-03-19'
+  source: https://www.prnewswire.com/news-releases/conversocial-acquires-ai-powered-conversational-commerce-platform-assist-300813657.html
+x-domain-status: parked
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Conversational Commerce
+- Chatbots
+- Messaging
+- Customer Experience
+- Artificial Intelligence
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +56,12 @@ maintainers:
 common:
 - type: Website
   url: https://assi.st
+- type: Blog
+  url: https://medium.com/assist
+- type: DomainSecurity
+  url: security/assi-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
